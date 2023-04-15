@@ -4,6 +4,12 @@ A tool to switch Hyprland workspaces relatively to each monitor and create new w
 
 Requires Hyprland
 
+## Installation
+
+### Cargo:
+```
+cargo install hyprland-relative-workspace
+```
 ## Usage:
 
 ### Reccomended
