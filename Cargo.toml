@@ -1,7 +1,13 @@
 [package]
 name = "hyprland-relative-workspace"
+description = "A tool to switch Hyprland workspaces relatively to monitor"
 version = "1.0.0"
 edition = "2021"
+license = "MIT"
+homepage = "https://github.com/CheesyPhoenix/hyprland-relative-workspace"
+repository = "https://github.com/CheesyPhoenix/hyprland-relative-workspace"
+readme = "README.md"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
