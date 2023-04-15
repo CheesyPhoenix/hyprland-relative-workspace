@@ -10,6 +10,12 @@ Requires Hyprland
 ```
 cargo install hyprland-relative-workspace
 ```
+
+### Arch - AUR:
+```
+yay -S hyprland-relative-workspace-bin
+```
+
 ## Usage:
 
 ### Reccomended
