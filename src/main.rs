@@ -10,19 +10,24 @@ fn main() -> hyprland::Result<()> {
             .map(|x| x.to_string())
             .contains(&args[1])
     {
-        eprintln!("Incorrect command usage! \nCorrect usage: '{} [\"f\", \"forward\", \"b\", \"backward\"] (opt. \"--with-window\")'", args[0]);
+        eprintln!("Incorrect command usage! \nCorrect usage: '{} [\"f\", \"forward\", \"b\", \"backward\"] (opt. \"--with-window\", \"--no-create-new\")'", args[0]);
         exit(1);
     }
 
     change_workspace(
         args.contains(&"--with-window".into()),
         args[1] == "b" || args[1] == "backward",
+        args.contains(&"--no-create-new".into()),
     )?;
 
     Ok(())
 }
 
-fn change_workspace(with_window: bool, backward: bool) -> hyprland::Result<()> {
+fn change_workspace(
+    with_window: bool,
+    backward: bool,
+    no_create_new: bool,
+) -> hyprland::Result<()> {
     let monitor = Monitors::get()?
         .find(|x| x.focused)
         .expect("There should always be a focused monitor");
@@ -52,6 +57,11 @@ fn change_workspace(with_window: bool, backward: bool) -> hyprland::Result<()> {
         exec_change_workspace(if backward { -1 } else { 1 }, true, with_window)?;
     } else {
         // workspace doesn't already exist, therefore create new
+
+        if no_create_new {
+            println!("Did nothing; \"--no-create-new\" was specified");
+            return Ok(());
+        }
 
         if !backward {
             // exit if current workspace is empty

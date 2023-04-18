@@ -34,8 +34,8 @@ Use either "f" or "forward" to advance one workspace relative to the current foc
 
 Similarily, you can use "b" or "backward" to go back (down, left, eg. workspace 3 -> workspace 2) one workspace relative to the focused monitor. Also creating a new workspace if required and possible (eg. if workspaces 1, and 3 exist, going back one would create workspace 2. However you cannot go lower than 1).
 
-All of these commands can also be used with ``--with-window`` to bring the currently focused window with you.
+All of these commands can also be used with ``--with-window`` to bring the currently focused window with you, or ``--no-create-new`` to prevent the creation of new workspaces see [#1](https://github.com/CheesyPhoenix/hyprland-relative-workspace/issues/1).
 
 ```
-$ hyperland-relative-workspace ["f", "forward", "b", "backward"] (opt. "--with window")
+$ hyperland-relative-workspace ["f", "forward", "b", "backward"] (opt. "--with-window", "--no-create-new")
 ```
