@@ -43,6 +43,7 @@ fn change_workspace(with_window: bool, backward: bool) -> hyprland::Result<()> {
             > active_workspace.id)
         || (backward
             && workspaces_of_monitor
+                .clone()
                 .min_by_key(|x| x.id)
                 .expect("There should always be at least one workspace")
                 .id
@@ -53,6 +54,16 @@ fn change_workspace(with_window: bool, backward: bool) -> hyprland::Result<()> {
         // workspace doesn't already exist, therefore create new
 
         if !backward {
+            // exit if current workspace is empty
+            let workpace = workspaces_of_monitor
+                .clone()
+                .find(|x| x.id == active_workspace.id)
+                .expect("Should be able to find current workspace");
+            if workpace.windows == 0 {
+                println!("Did nothing; already on an empty workspace");
+                return Ok(());
+            }
+
             let highest_workspace_id = workspaces
                 .max_by_key(|x| x.id)
                 .expect("There should always be at least one workspace")
