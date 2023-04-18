@@ -1,7 +1,7 @@
 cargo publish
 
 makepkg -g
-rm hyprland-relative-workspace-*-x86_64.tar.gz
+rm hyprland-relative-workspace-*.tar.gz
 cp PKGBUILD hyprland-relative-workspace-bin
 cd hyprland-relative-workspace-bin
 sed -i "s/pkgver=[0-9]\.[0-9]\.[0-9]/pkgver=`cargo pkgid | cut -d "@" -f2`/" PKGBUILD
