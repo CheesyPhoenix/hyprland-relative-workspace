@@ -7,12 +7,12 @@ Requires Hyprland
 ## Installation
 _Do not use the github releases directly, these are out of date and only for backwards compatability_
 
-### Cargo:
+### Cargo ([crates.io](https://crates.io/crates/hyprland-relative-workspace)):
 ```
 cargo install hyprland-relative-workspace
 ```
 
-### Arch - AUR:
+### Arch ([AUR](https://aur.archlinux.org/packages/hyprland-relative-workspace-bin)):
 ```
 yay -S hyprland-relative-workspace-bin
 ```
