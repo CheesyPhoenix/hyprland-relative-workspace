@@ -11,7 +11,7 @@ license=("MIT")
 arch=("x86_64")
 provides=("hyprland-relative-workspace")
 conflicts=("hyprland-relative-workspace")
-source=("source=("hyprland-relative-workspace-$pkgver.tar.gz::https://static.crates.io/crates/hyprland-relative-workspace/hyprland-relative-workspace-$pkgver.crate")")
+source=("hyprland-relative-workspace-$pkgver.tar.gz::https://static.crates.io/crates/hyprland-relative-workspace/hyprland-relative-workspace-$pkgver.crate")
 sha256sums=("22f32b790f5f7b049571a727fb4cf17f483ff6650e9d95adb539ef0372e9af16")
 
 package() {
