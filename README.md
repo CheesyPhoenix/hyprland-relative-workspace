@@ -5,6 +5,7 @@ A tool to switch Hyprland workspaces relatively to each monitor and create new w
 Requires Hyprland
 
 ## Installation
+_Do not use the github releases directly, these are out of date and only for backwards compatability_
 
 ### Cargo:
 ```
@@ -17,7 +18,6 @@ yay -S hyprland-relative-workspace-bin
 ```
 
 ## Usage:
-_Do not use the github releases directly, these are out of date and only for backwards compatability_
 
 ### Reccomended
 
