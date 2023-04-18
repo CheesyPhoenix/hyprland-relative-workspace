@@ -17,6 +17,7 @@ yay -S hyprland-relative-workspace-bin
 ```
 
 ## Usage:
+_Do not use the github releases directly, these are out of date and only for backwards compatability_
 
 ### Reccomended
 
