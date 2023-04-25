@@ -18,7 +18,7 @@ yay -S hyprland-relative-workspace-bin
 
 ## Usage:
 
-### Reccomended
+### Recommended
 
 Add binds in your Hyprland config similar to these:
 ```Properties
