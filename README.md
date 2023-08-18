@@ -1,3 +1,8 @@
+## This project is now deprecated, and no longer maintained
+This functionallity has been implemented in base Hyprland with the workspace dispatch r+1/r-1. See [this issue](https://github.com/hyprwm/Hyprland/issues/1473#issuecomment-1548245903) for details, or view [the wiki page](https://wiki.hyprland.org/Configuring/Dispatchers/#workspaces)
+
+<br>
+
 # hyprland-relative-workspace
 
 A tool to switch Hyprland workspaces relatively to each monitor and create new workspaces where necessary
